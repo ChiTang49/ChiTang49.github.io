@@ -1,58 +1,63 @@
 ---
 permalink: /
 title: ""
-excerpt: ""
+excerpt: "About Wenchao Jia"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+<span class="anchor" id="about-me"></span>
 
-<span class='anchor' id='about-me'></span>
+I am currently a master's student in Computer Technology at East China Normal University.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+My research interests include **embodied AI**, **vision-language-action (VLA) models**, **large language models**, and **reinforcement learning**. My recent work focuses on self-evolving post-training, outcome-value-guided planning, and agentic code repair.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+<span class="anchor" id="news"></span>
 
+# News
 
-# 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2026.09*: Began my M.S. studies in Computer Technology at East China Normal University.
 
-# 📝 Publications 
+<span class="anchor" id="projects"></span>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+# Selected Projects
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+## QueST VLA: Self-Evolving Post-Training with Outcome-Value-Guided Planning and Experience Reuse
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+[[Code]](https://github.com/ChiTang49/SelfEvoVLA)
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
+A self-evolving framework for long-horizon robot manipulation that integrates policy optimization during training, experience selection during inference, and successful trajectory reuse.
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+- **Policy Optimization**: Improved VLA policies using multi-trajectory rollouts, leave-one-out advantage estimation, and PPO. The macro-average success rate across three LIBERO-Long tasks increased from 61.3% to **74.7% (+13.3 percentage points)**.
+- **Outcome Value Model**: Designed a trajectory-level value model that combines context, current observations, and action-token features to predict the success probability of candidate action chunks and guide planning.
+- **Experience Reuse**: Fed successful trajectories back into the policy prior. Across one policy-training seed and two evaluation seeds, the mean success rate of experience reuse combined with planning increased from 66% to **72%**.
+- **Tech Stack**: Python, PyTorch, QueST, RLOO, PPO, LIBERO-Long.
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+## Interactive Code Repair with Qwen3.5-9B: SEED Online Policy Distillation and GSPO Sequence-Level Reinforcement Learning
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+A post-training framework combining SFT, online RL, and policy distillation to address coarse terminal rewards and long-horizon credit assignment in agentic code repair.
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- **Supervised Fine-Tuning**: Fine-tuned Qwen3.5-9B with LoRA, increasing the repair success rate from 37.50% to **55.08%** and the valid-action rate from 89.36% to **99.92%**.
+- **Online Reinforcement Learning**: Built an end-to-end pipeline for data generation, trajectory sampling, policy training, and unified evaluation with veRL and vLLM, enabling a test-driven Repair Agent with multi-turn interaction.
+- **Sequence-Level Optimization**: At comparable strict repair success rates during training, GSPO reduced the average cross-round fluctuation in policy loss by approximately **17%**.
+- **Tech Stack**: PyTorch, Transformers, vLLM, veRL, LoRA, GRPO, GSPO, SEED.
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+<span class="anchor" id="learning"></span>
+# Learning & Notes
+
+- **[Embodied AI](https://github.com/ChiTang49/Embodied-AI)**: Course notes, experiments, learning resources, and reflections on embodied AI.
+- **[Agent Learning](https://github.com/ChiTang49/Agent-Learning)**: Learning notes and reflections on AI agents, agentic reinforcement learning, and LLM fundamentals.
+
+<span class="anchor" id="honors"></span>
+# Honors and Awards
+
+- *2025.05*: Bronze Medal, CCPC Jiangsu Provincial Collegiate Programming Contest.
+- *2025.05*: Silver Medal, National Final of the China Collegiate Computing Contest's Group Programming Ladder Tournament.
+
+<span class="anchor" id="education"></span>
+# Educations
+
+- *2026.09 - Present*, Master, East China Normal University, Shanghai.
+- *2022.09 - 2026.06*, Undergraduate, Jiangsu University of Science and Technology, Zhenjiang.
